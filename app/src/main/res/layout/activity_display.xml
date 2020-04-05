@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/rootLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#0099cc"
+tools:context=".DisplayActivity">
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+
+        android:visibility="invisible"></VideoView>
+
+    //left buttons
+
+    <Button
+        android:id="@+id/button_left_top"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/arrow_custom" />
+
+    <Button
+        android:id="@+id/button_left_right"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/button_left_left"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/button_left_top"
+        android:layout_toRightOf="@+id/button_left_top"
+        android:background="@drawable/arrow_custom"
+        android:rotation="90" />
+
+    <Button
+        android:id="@+id/button_left_bottom"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/button_left_top"
+        android:layout_alignLeft="@+id/button_left_top"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/arrow_custom"
+        android:rotation="180" />
+
+    //right buttons
+
+    <Button
+        android:id="@+id/button_left_left"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/arrow_custom"
+        android:rotation="270" />
+    <Button
+        android:id="@+id/button_right_top"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/arrow_custom" />
+    <Button
+        android:id="@+id/button_right_right"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/button_right_left"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/arrow_custom"
+        android:rotation="90" />
+    <Button
+        android:id="@+id/button_right_bottom"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/button_right_right"
+        android:layout_toLeftOf="@+id/button_right_right"
+        android:background="@drawable/arrow_custom"
+        android:rotation="180" />
+    <Button
+        android:id="@+id/button_right_left"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="59dp"
+        android:layout_toStartOf="@+id/button_right_top"
+        android:layout_toLeftOf="@+id/button_right_top"
+        android:background="@drawable/arrow_custom"
+        android:rotation="270" />
+
+    //record button
+
+    <ImageView
+        android:id="@+id/imageView_camera"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_record"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="376dp"
+        android:layout_marginLeft="376dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_weight="1"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    //audio switch
+
+    <ToggleButton
+        android:id="@+id/button_record"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/custom_button"
+        android:textOff="Record"
+        android:textOn="Stop"
+        android:textSize="18sp"
+        android:textStyle="bold"></ToggleButton>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginRight="83dp"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track" />
+
+    //Screen shot button
+
+    <Button
+        android:id="@+id/button_ss"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="431dp"
+        android:layout_marginLeft="431dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:layout_toStartOf="@+id/switch_audio"
+        android:layout_toLeftOf="@+id/switch_audio"
+        android:background="@drawable/custom_button"
+        android:text="@string/ss_button"
+        android:textSize="16sp"
+        android:textStyle="bold">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="57dp"
+        android:layout_height="41dp"
+        android:layout_alignTop="@+id/button_record"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="-6dp"
+        app:srcCompat="@android:drawable/presence_video_online" />
+
+
+</RelativeLayout>
