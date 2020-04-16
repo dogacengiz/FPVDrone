@@ -81,10 +81,8 @@ public class DisplayActivity extends AppCompatActivity {
         return bitmap;
     }
 
-
-
-    private void screenshot() {
-
+    private void screenshot()
+    {
         Date date = new Date();
         CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
         String path = getExternalFilesDir(Environment.DIRECTORY_PICTURES).toString() +  "/" + now + ".jpg";
