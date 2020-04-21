@@ -2,6 +2,7 @@ package com.example.fpvdrone;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,7 +11,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
@@ -58,6 +58,21 @@ public class DisplayActivity extends AppCompatActivity {
                 screenshot();
             }
         });
+
+
+        Button btnSaveMediaPage = findViewById(R.id.button);
+        btnSaveMediaPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             nextPage();
+            }
+        });
+
+    }
+
+    public void nextPage(){
+        Intent intent = new Intent(this, SaveMedia.class);
+        startActivity(intent);
     }
 
     public void checkPermission(String permission, int requestCode)
@@ -104,5 +119,7 @@ public class DisplayActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
 

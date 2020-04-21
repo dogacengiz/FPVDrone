@@ -17,6 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SaveMedia"></activity>
+
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/provider_paths" />
@@ -41,6 +43,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <provider
             android:name=".GenericFileProvider"
             android:authorities="${applicationId}.provider"

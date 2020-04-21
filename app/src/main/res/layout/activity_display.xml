@@ -9,6 +9,8 @@ android:background="#0099cc"
 tools:context=".DisplayActivity">
 
 
+    //left buttons
+
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
@@ -16,8 +18,6 @@ tools:context=".DisplayActivity">
         android:background="#FFFFFF"
 
         android:visibility="invisible"></VideoView>
-
-    //left buttons
 
     <Button
         android:id="@+id/button_left_top"
@@ -201,6 +201,16 @@ tools:context=".DisplayActivity">
         android:layout_marginLeft="19dp"
         android:layout_marginTop="-6dp"
         app:srcCompat="@android:drawable/presence_video_online" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="413dp"
+        android:text="STOP" />
 
 
 </RelativeLayout>
